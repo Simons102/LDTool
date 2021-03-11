@@ -20,9 +20,6 @@ This tool can do the entire lego dimensions crypto stuff for you, you only have 
 Most of the crypto heavy lifting was already done [here](https://github.com/phogar/ldnfctags);
 this is just an arduino port of the essential stuff.
 
-It takes commands via serial.  
-Use the serial monitor and set the baud rate to 9600.
-
 Things that work:
 - password generation and authentification
 - writing character tags with given id
@@ -31,6 +28,11 @@ Things that work:
 
 Things that don't work:
 - vehicle upgrades
+
+## Usage
+
+It takes commands via serial.  
+Use the serial monitor and set the baud rate to 9600.
 
 ## Commands
 
