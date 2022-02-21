@@ -88,6 +88,23 @@ const char* commandWritePasswordAndVehicle = "wpv";
 const char* commandWritePassword = "wpwd";
 const char* commandHelp = "help";
 
+// ##### function definitions #####
+void printHelp();
+void printHex32(uint32_t* data, byte l);
+void printHex(byte* data, byte l);
+bool waitForChip();
+bool verifyCorrectChip();
+void dumpData(bool tryAuth);
+bool auth(byte* pwd);
+bool prepareChip();
+bool prepareChipAuth();
+void calculateStuff(uint32_t characterId);
+bool writeCharacter(uint32_t characterId);
+bool writeVehicle(uint32_t vehicleId, uint64_t upgrades);
+bool writeData(int addr, byte* buf, byte pages);
+bool writePwd();
+void printInfo();
+
 void setup() {
   Serial.begin(9600);
   SPI.begin();
