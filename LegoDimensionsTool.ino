@@ -396,6 +396,7 @@ bool prepareChip(){
     Serial.println("unknown chip");
     return false;
   }
+  return true;
 }
 
 bool prepareChipAuth(){
@@ -448,7 +449,7 @@ bool writeCharacter(uint32_t characterId){
   
 #ifdef NO_CHIP_WRITE
   Serial.println("not actually writing stuff");
-  return;
+  return false;
 #endif
 
   // start writing from page 35
@@ -486,7 +487,7 @@ bool writeVehicle(uint32_t vehicleId, uint64_t upgrades){
   
 #ifdef NO_CHIP_WRITE
   Serial.println("not actually writing stuff");
-  return;
+  return false;
 #endif
 
   // start writing from page 35
@@ -528,7 +529,7 @@ bool writePwd(){
   
 #ifdef NO_CHIP_WRITE
   Serial.println("not actually writing stuff");
-  return;
+  return false;
 #endif
 
   if(!writeData(ADDR_PWD, pwd, 1)){
